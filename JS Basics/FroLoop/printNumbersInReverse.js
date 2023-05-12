@@ -1,5 +1,7 @@
 function printNumbers(number) {
-  for (let index = number; index >= 1; index--) {
+  let n = Number(number);
+
+  for (let index = n; index >= 1; index--) {
     console.log(index);
   }
 }
