@@ -7,8 +7,8 @@ function histogram(input) {
   let p5 = 0;
   let numbers = 0;
 
-  for (let index = 1; index < input.length; index++) {
-    var currentNumber = Number(input[index]);
+  for (let index = 1; index <= n; index++) {
+    let currentNumber = Number(input[index]);
 
     if (currentNumber < 200) {
       p1++;
@@ -38,4 +38,20 @@ function histogram(input) {
   console.log(`${p5Percent.toFixed(2)}%`);
 }
 
-histogram(["7", "800", "801", "250", "199", "399", "599", "799"]);
+histogram([
+  "14",
+  "53",
+  "7",
+  "56",
+  "180",
+  "450",
+  "920",
+  "12",
+  "7",
+  "150",
+  "250",
+  "680",
+  "2",
+  "600",
+  "200",
+]);
