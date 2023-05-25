@@ -1,6 +1,5 @@
 function solve(number) {
   let sum = 0;
-  let numberDuplicate = number;
 
   for (let i = 1; i < number; i++) {
     if (number % i == 0) {
