@@ -62,9 +62,9 @@ function solve(arr) {
     }
   }
 
-  let moviesAsJSON = JSON.stringify(movies);
-
-  console.log(moviesAsJSON);
+  for (const movie of movies) {
+    console.log(JSON.stringify(movie));
+  }
 }
 
 solve([
