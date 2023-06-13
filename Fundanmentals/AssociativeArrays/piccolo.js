@@ -16,8 +16,12 @@ function solve(arr) {
   let entries = Object.entries(cars);
   let sorted = entries.sort((a, b) => a[0].localeCompare(b[0]));
 
-  for (const [key] of sorted) {
-    console.log(key);
+  if (sorted.length == 0) {
+    console.log(`Parking lot is empty!`);
+  } else {
+    for (const [key] of sorted) {
+      console.log(key);
+    }
   }
 }
 
