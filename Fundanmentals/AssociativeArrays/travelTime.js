@@ -36,8 +36,6 @@ function solve(arr) {
     }
 
     console.log(`${key} -> ${cityPrice.substring(0, cityPrice.length - 3)}`);
-
-    // console.log(`${key} -> ${city} -> ${price}`);
   }
 }
 
