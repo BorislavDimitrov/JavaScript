@@ -2,7 +2,7 @@ function createArticle() {
   let titleElement = document.getElementById("createTitle");
   let contentElement = document.getElementById("createContent");
 
-  if (titleElement.value !== "" && contentElement.value) {
+  if (titleElement.value !== "" && contentElement.value == "") {
     let headingElement = document.createElement("h3");
     let headingText = document.createTextNode(titleElement.value);
     headingElement.append(headingText);
