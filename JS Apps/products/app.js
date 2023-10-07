@@ -5,7 +5,7 @@ function getInfo() {
   const divEl = document.getElementById("productsTitle");
   divEl.textContent = value;
 
-  clearProducts();
+  document.getElementById("products").innerHTML = "";
 
   let url = `https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json`;
 
@@ -30,14 +30,6 @@ function getInfo() {
       const currentProductEl = document.createElement("li");
       currentProductEl.textContent = `Name: ${currentProduct.name} price: ${currentProduct.price} type: ${currentProduct.type}`;
       productUlEl.appendChild(currentProductEl);
-    }
-  }
-
-  function clearProducts() {
-    const productUlEl = document.getElementById("products");
-
-    while (productUlEl.firstChild) {
-      productUlEl.removeChild(productUlEl.firstChild);
     }
   }
 }
