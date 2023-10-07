@@ -9,18 +9,16 @@ function getInfo() {
 
   let url = `https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json`;
 
-  fetch(url).then((response) => {
-    if (response.status !== 200) {
-      stopName = "Error";
-    } else {
-      let jsonResult = response.json();
-      jsonResult.then((json) => {
-        products = json.filter((product) => product.name.includes(value));
+  fetch(url)
+    .then((response) => response.json())
+    .then((json) => {
+      const products = json.filter((product) => product.name.includes(value));
 
-        createProducts(products);
-      });
-    }
-  });
+      createProducts(products);
+    })
+    .catch((error) => {
+      document.getElementById("productsTitle").textContent = "Error !";
+    });
 
   function createProducts(products) {
     let productUlEl = document.getElementById("products");
