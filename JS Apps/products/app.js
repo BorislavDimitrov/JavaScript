@@ -15,10 +15,8 @@ function getInfo() {
     } else {
       let jsonResult = response.json();
       jsonResult.then((json) => {
-        console.log(json);
         products = json.filter((product) => product.name.includes(value));
 
-        console.log(`products after map: ${products}`);
         createProducts(products);
       });
     }
@@ -28,7 +26,7 @@ function getInfo() {
     let productUlEl = document.getElementById("products");
     for (let i = 0; i < products.length; i++) {
       const currentProduct = products[i];
-      console.log(`product number ${i + 1} ${currentProduct}`);
+
       const currentProductEl = document.createElement("li");
       currentProductEl.textContent = `Name: ${currentProduct.name} price: ${currentProduct.price} type: ${currentProduct.type}`;
       productUlEl.appendChild(currentProductEl);
